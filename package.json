@@ -4,5 +4,24 @@
   "description": "node.js + express + react starter",
   "main": "index.js",
   "author": "koansang",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf build public/bundle.js",
+    "build-server": "babel server --out-dir build",
+    "build-client": "cd client && yarn build",
+    "build": "npm-run-all build-server build-client",
+    "start-client": "cd client && yarn start",
+    "start-server": "nodemon --exec babel-node ./server/main.js --watch server",
+    "start": "npm-run-all start-server start-client"    
+  },
+  "proxy": "http://localhost:3300",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "npm-run-all": "^4.1.3"
+  }
 }
