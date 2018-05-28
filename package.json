@@ -1,0 +1,8 @@
+{
+  "name": "my-starter",
+  "version": "1.0.0",
+  "description": "node.js + express + react starter",
+  "main": "index.js",
+  "author": "koansang",
+  "license": "MIT"
+}
